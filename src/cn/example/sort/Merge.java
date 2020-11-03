@@ -3,17 +3,9 @@ package cn.example.sort;
 public class Merge {
     //归并所需要的辅助数组
     private static Comparable[] assist;
-
-    /*
-       比较v元素是否小于w元素
-    */
     private static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w)<0;
     }
-
-    /*
-    数组元素i和j交换位置
-     */
     private static void exch(Comparable[] a, int i, int j) {
         Comparable t = a[i];
         a[i] = a[j];
@@ -21,9 +13,6 @@ public class Merge {
     }
 
 
-    /*
-           对数组a中的元素进行排序
-        */
     public static void sort(Comparable[] a) {
         //1.初始化辅助数组assist；
         assist = new Comparable[a.length];
